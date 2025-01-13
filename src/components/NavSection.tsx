@@ -1,12 +1,18 @@
 import { useState } from 'react';
-import { Menu,X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { UserIcon } from './ui/user';
 import { FlaskIcon } from './ui/flask';
 import { TimerIcon } from './ui/timer';
 import { RocketIcon } from './ui/rocket';
 import { MessageCircleMoreIcon } from './ui/message-circle-more';
 
-export default function Navbar({ activeSection, setActiveSection }) {
+// ✅ Definindo as props com tipagem explícita
+interface NavbarProps {
+  activeSection: string;
+  setActiveSection: (section: string) => void;
+}
+
+export default function Navbar({ activeSection, setActiveSection }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
@@ -42,7 +48,6 @@ export default function Navbar({ activeSection, setActiveSection }) {
                   activeSection === item.id ? 'bg-[#2B4162] text-white' : 'hover:bg-[#2B4162]/50 text-white'
                 }`}
               >
-                {/* Ícone com efeito de hover */}
                 <span className="transition-transform transform group-hover:scale-110">
                   {item.icon}
                 </span>

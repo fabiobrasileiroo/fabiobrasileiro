@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect } from 'react';
-import { Code2, Briefcase, User2, Mail, Github, Linkedin, ExternalLink, Clock, Server, Wrench } from 'lucide-react';
+import { Code2, User2, Server, Wrench } from 'lucide-react';
 import { ConfettiTitle } from './confettiTitle';
 import { Description } from './Description';
 import { AtSignIcon } from './ui/at-sign';
@@ -9,11 +9,13 @@ import { GithubIcon } from './ui/github';
 import Navbar from './NavSection';
 import { YoutubeIcon } from './ui/youtube';
 import Experiencia from './Experiencia';
-import { TimelineDemo } from './TimeLine';
+import Image from 'next/image';
+// import { TimelineDemo } from './TimeLine';
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('about');
-  const [isVisible, setIsVisible] = useState({});
+  const [isVisible, setIsVisible] = useState<Record<string, boolean>>({});
+
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -36,26 +38,26 @@ export default function Portfolio() {
   }, []);
 
 
-  const projects = [
-    {
-      title: "E-Commerce Platform",
-      description: "Full-stack shopping platform with React and Node.js",
-      tech: ["React", "Node.js", "MongoDB", "Express"],
-      link: "#"
-    },
-    {
-      title: "Task Management App",
-      description: "Real-time collaboration tool with websockets",
-      tech: ["Vue.js", "Firebase", "Tailwind CSS"],
-      link: "#"
-    },
-    {
-      title: "AI Chat Interface",
-      description: "Modern chat application with AI integration",
-      tech: ["Next.js", "OpenAI API", "PostgreSQL"],
-      link: "#"
-    }
-  ];
+  // const projects = [
+  //   {
+  //     title: "E-Commerce Platform",
+  //     description: "Full-stack shopping platform with React and Node.js",
+  //     tech: ["React", "Node.js", "MongoDB", "Express"],
+  //     link: "#"
+  //   },
+  //   {
+  //     title: "Task Management App",
+  //     description: "Real-time collaboration tool with websockets",
+  //     tech: ["Vue.js", "Firebase", "Tailwind CSS"],
+  //     link: "#"
+  //   },
+  //   {
+  //     title: "AI Chat Interface",
+  //     description: "Modern chat application with AI integration",
+  //     tech: ["Next.js", "OpenAI API", "PostgreSQL"],
+  //     link: "#"
+  //   }
+  // ];
 
   const timelineEvents = [
     {
@@ -100,8 +102,9 @@ export default function Portfolio() {
     <div className="min-h-screen bg-[#1a0f2e] text-white font-inter">
       {/* Hero Section */}
       <div className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* bg-[url('https://upload.wikimedia.org/wikipedia/commons/0/0d/Great_Wave_off_Kanagawa2.jpg')] */}
         <div
-          className="absolute inset-0 bg-[url('https://upload.wikimedia.org/wikipedia/commons/0/0d/Great_Wave_off_Kanagawa2.jpg')] bg-cover bg-center opacity-40 animate-[wave_15s_ease-in-out_infinite]"
+          className="absolute inset-0 bg-[url('https://i.ibb.co/dJ6vC43/one-piece-monkey-d-luffy-hokusai-waves-wallpaper-preview.jpg')] bg-cover bg-center opacity-40 animate-[wave_15s_ease-in-out_infinite]"
           style={{ backgroundPosition: '50% 70%' }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f2e] via-transparent to-transparent" />
@@ -154,7 +157,7 @@ export default function Portfolio() {
       {/* Main Content */}
       <main className="max-w-5xl mx-auto px-4 py-16">
         {/* Timeline Section */}
-          {/* <TimelineDemo /> */}
+        {/* <TimelineDemo /> */}
         <section className={activeSection === 'timeline' ? 'block' : 'hidden'}>
           <div className="relative">
             <div className="absolute left-0 md:left-1/2 h-full w-0.5 bg-gradient-to-b from-[#2B4162] to-[#8B9BB4] transform -translate-x-1/2" />
@@ -300,7 +303,7 @@ export default function Portfolio() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="flex items-center gap-4 p-4 bg-[#2B4162]/30 rounded-xl">
                   <div className="p-3 bg-[#2B4162]/50 rounded-lg">
-                    <img src="https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Cloud-Practitioner_badge.634f8a21af2e0e956ed8905a72366146ba22b74c.png"
+                    <Image width={48} height={48} src="https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Cloud-Practitioner_badge.634f8a21af2e0e956ed8905a72366146ba22b74c.png"
                       alt="AWS Certification"
                       className="w-12 h-12 object-contain" />
                   </div>
@@ -350,7 +353,9 @@ export default function Portfolio() {
               <div className="w-full md:w-1/3 flex justify-center md:justify-start">
                 <div className="relative group">
                   <div className="absolute -inset-0.5 bg-gradient-to-r from-[#4A90E2] to-[#63B3ED] rounded-full opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt blur-lg"></div>
-                  <img
+                  <Image
+                    width={192}
+                    height={192}
                     src="https://media.licdn.com/dms/image/v2/D4D03AQH-SWM-UiriJg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1688764384631?e=1742428800&v=beta&t=m1Y98KZGzMYmRfYWnog1dFKco-109tTw8NIYUCXHv_I"
                     alt="Fábio Profile"
                     className="relative w-48 h-48 rounded-full object-cover border-4 border-[#2B4162]/30 shadow-xl transform transition duration-500 hover:scale-105"
