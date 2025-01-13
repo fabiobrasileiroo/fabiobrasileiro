@@ -14,7 +14,7 @@ export function Description() {
             "Diretamente de Manaus-AM 🌳",
           ]}
           speed={70}
-          className="text-blue-500"
+          className="text-cyan-400"
           waitTime={1500}
           deleteSpeed={40}
           cursorChar={"_"}

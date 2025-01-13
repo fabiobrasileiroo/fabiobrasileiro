@@ -10,6 +10,7 @@ import Navbar from './NavSection';
 import { YoutubeIcon } from './ui/youtube';
 import Experiencia from './Experiencia';
 import Image from 'next/image';
+import TerminalCommand from './TerminalCommand';
 // import { TimelineDemo } from './TimeLine';
 
 export default function Portfolio() {
@@ -116,11 +117,12 @@ export default function Portfolio() {
           {/* <p className="text-2xl text-[#8B9BB4] mb-8">Full Stack Developer</p> */}
           <Description />
           <div className="flex gap-4 justify-center">
-            <a href="#" className="p-2 hover:text-cyan-50 transition-colors"><GithubIcon /></a>
-            <a href="#" className="p-2  hover:text-cyan-50 transition-colors"><LinkedinIcon /></a>
-            <a href="#" className="p-2  hover:text-cyan-50 transition-colors"><AtSignIcon /></a>
-            <a href="#" className="p-2  hover:text-cyan-50 transition-colors"><YoutubeIcon /></a>
+            <a href="https://github.com/fabiobrasileiroo" target='_blank' className="p-2 hover:text-cyan-50 transition-colors"><GithubIcon /></a>
+            <a href="https://www.linkedin.com/in/fabiobrasileiro/" target='_blank' className="p-2  hover:text-cyan-50 transition-colors"><LinkedinIcon /></a>
+            <a href="mailto:fabio.h591@gmail.com" className="p-2  hover:text-cyan-50 transition-colors"><AtSignIcon /></a>
+            <a href="https://www.youtube.com/@fabiobrasileiroo" target='_blank' className="p-2  hover:text-cyan-50 transition-colors"><YoutubeIcon /></a>
           </div>
+          <TerminalCommand/>
         </div>
       </div>
 

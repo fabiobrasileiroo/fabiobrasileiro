@@ -15,7 +15,7 @@ export function ConfettiTitle() {
 
   return (
     <div
-      className="relative flex pt-44 w-full flex-col items-center justify-center overflow-hidden rounded-lg"
+      className="relative flex pt-52 w-full flex-col items-center justify-center overflow-hidden rounded-lg"
       role="button"
       aria-label="Título com animação de confete"
       onMouseEnter={handleMouseEnter}
