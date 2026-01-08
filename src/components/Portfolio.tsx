@@ -122,7 +122,7 @@ export default function Portfolio() {
             <a href="mailto:fabio.h591@gmail.com" className="p-2  hover:text-cyan-50 transition-colors"><AtSignIcon /></a>
             <a href="https://www.youtube.com/@fabiobrasileiroo" target='_blank' className="p-2  hover:text-cyan-50 transition-colors"><YoutubeIcon /></a>
           </div>
-          <TerminalCommand/>
+          <TerminalCommand />
         </div>
       </div>
 
