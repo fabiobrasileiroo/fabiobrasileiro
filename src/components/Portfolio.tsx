@@ -360,6 +360,8 @@ export default function Portfolio() {
                     height={192}
                     src="https://media.licdn.com/dms/image/v2/D4D03AQH-SWM-UiriJg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1688764384631?e=1742428800&v=beta&t=m1Y98KZGzMYmRfYWnog1dFKco-109tTw8NIYUCXHv_I"
                     alt="Fábio Profile"
+                    unoptimized
+                    referrerPolicy="no-referrer"
                     className="relative w-48 h-48 rounded-full object-cover border-4 border-[#2B4162]/30 shadow-xl transform transition duration-500 hover:scale-105"
                   />
                 </div>
